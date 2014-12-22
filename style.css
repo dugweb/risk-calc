@@ -432,5 +432,29 @@ table th[class*="col-"] {
 @import "bootstrap/utilities";
 @import "bootstrap/responsive-utilities";
 */
+* {
+  box-sizing: border-box; }
+
+.sidebar {
+  background: red;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15;
+  padding-right: 15; }
+  @media (min-width: 768px) {
+    .sidebar {
+      float: left;
+      width: 33.33333%; } }
+
+.main {
+  background: green;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15;
+  padding-right: 15; }
+  @media (min-width: 768px) {
+    .main {
+      float: left;
+      width: 66.66667%; } }
 
 /*# sourceMappingURL=style.css.map */

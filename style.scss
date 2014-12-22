@@ -8,3 +8,18 @@
 // @import "bootstrap/variables";
 // @import "bootstrap/mixins";
 // @import "bootstrap/tables";
+
+* {
+	box-sizing: border-box;
+}
+
+.sidebar {
+
+	background:red;
+	@include make_sm_column(4, 30);
+}
+
+.main {
+	background:green;
+	@include make_sm_column(8, 30);
+}
