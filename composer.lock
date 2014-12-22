@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "c7792a04eb685999d2ee37dd5f080788",
+    "hash": "49b85df50a0414bbdb700b2fa64957de",
     "packages": [
         {
             "name": "components/angular.js",
@@ -311,6 +311,48 @@
             "time": "2014-10-16 13:35:16"
         },
         {
+            "name": "components/jquery",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/components/jquery.git",
+                "reference": "104762e247cc7e377cdbba9d27414a5944b9c81e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/components/jquery/zipball/104762e247cc7e377cdbba9d27414a5944b9c81e",
+                "reference": "104762e247cc7e377cdbba9d27414a5944b9c81e",
+                "shasum": ""
+            },
+            "type": "component",
+            "extra": {
+                "component": {
+                    "scripts": [
+                        "jquery.js"
+                    ],
+                    "files": [
+                        "jquery.min.js",
+                        "jquery.min.map",
+                        "jquery-migrate.js",
+                        "jquery-migrate.min.js"
+                    ]
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "John Resig",
+                    "email": "jeresig@gmail.com"
+                }
+            ],
+            "description": "jQuery JavaScript Library",
+            "homepage": "http://jquery.com",
+            "time": "2014-11-16 14:44:25"
+        },
+        {
             "name": "twbs/bootstrap-sass",
             "version": "dev-master",
             "source": {
@@ -368,7 +410,8 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "twbs/bootstrap-sass": 20
+        "twbs/bootstrap-sass": 20,
+        "components/jquery": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

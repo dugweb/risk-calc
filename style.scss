@@ -16,10 +16,10 @@
 .sidebar {
 
 	background:red;
-	@include make_sm_column(4, 30);
+	@include make_sm_column(1, 30);
 }
 
 .main {
 	background:green;
-	@include make_sm_column(8, 30);
+	@include make_sm_column(11, 30);
 }
