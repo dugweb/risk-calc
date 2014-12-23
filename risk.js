@@ -1,6 +1,11 @@
-document.addEventListener('DOMContentLoaded', judist);
+
+var app = angular.module('myapp', []);
 
 
-function judist() {
-	console.log('judistpriest');
-}
+app.controller('formController', ['$scope', function($scope) {
+	
+	$scope.status = function() {
+		console.log($scope);	
+	}
+	
+}]);
