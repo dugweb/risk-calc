@@ -16,7 +16,6 @@ $grid_gutter_width: 30px;
 }
 
 .sidebar {
-
 	background:red;
 	@include make_sm_column(1, $grid_gutter_width);
 }
@@ -25,16 +24,20 @@ $grid_gutter_width: 30px;
 	background:green;
 	@include make_sm_column(11, $grid_gutter_width);
 }
+
 .half {
 	@include make_sm_column(6, $grid_gutter_width);
 }
 
 .score {
 	position: fixed;
-	right: 10px;
+	right: 30px;
 	top: 10px;
 	width: 300px;
 	@include make_row(12);
+	background-color: white;
+	padding: 20px;
+	box-shadow: 0px 3px 3px rgba(0,0,0,.3);
 }
 
 h2{
@@ -69,5 +72,4 @@ input[type='radio'] {
 }
 .important {
 	background-color: rgba(255,255,255,.5);
-	
 }

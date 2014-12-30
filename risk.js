@@ -16,36 +16,29 @@ app.controller('formController', ['$scope', function($scope) {
 	function calculateRisk() {
 
 		var total = 0;
-		var count = 0;
-		var previous = "";
 		var subTotal = 0;
-		console.log($scope.risk);
+		var count = 0;
+
 		for (var key in $scope.risk) {
-			
-			var section = key.substring(0, key.length - 1);
+			subTotal = 0;
+			count = 0;
 
 			if ($scope.risk.hasOwnProperty(key)) {
+				
+				for (var key2 in $scope.risk[key]) {
+					
+					if ($scope.risk[key].hasOwnProperty(key2)) {
 
-				if (angular.isArray($scope.risk[key])) {
-					console.log("judist");
+						subTotal += weightedValue(Number($scope.risk[key][key2]), key);	
+						count += 1;
+
+					}
 				}
-
-				subTotal += weightedValue(Number($scope.risk[key]), key);
 			}
-			
-			// console.log("section: " + section + "  previous: " + previous);
-			
-			if (section == previous) {
-				count +=1;
-				continue;
-			} else {
-				previous = section;
-				count = 1;
-				total += subTotal / count;
-				subTotal = 0;
-			}		
+			total += subTotal / count;
 		}
-		$scope.riskTolerenceScore = total;
+		$scope.riskTolerenceScore = Math.round(total * 100) / 100;
+		$scope.fundName = fundName(total);
 	}
 
 
@@ -57,7 +50,21 @@ app.controller('formController', ['$scope', function($scope) {
 		} else if (section.indexOf('experience') > -1) {
 			multiplier = .8;
 		}
-		return Math.floor((val * multiplier) * 100) / 100;
+		return val * multiplier;
 	}
 	
+
+	function fundName(val) {
+		if (val < 1.5) {
+			return "Conservative";
+		} else if (val < 2.5) {
+			return "Balanced";
+		} else if (val < 3.5) {
+			return "Moderate";
+		} else if (val < 4.5) {
+			return "Growth";
+		} else if (val >= 4.5) {
+			return "Aggressive";
+		}
+	}
 }]);
