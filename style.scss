@@ -29,6 +29,14 @@ $grid_gutter_width: 30px;
 	@include make_sm_column(6, $grid_gutter_width);
 }
 
+.score {
+	position: fixed;
+	right: 10px;
+	top: 10px;
+	width: 300px;
+	@include make_row(12);
+}
+
 h2{
 	color: #362119;
 }

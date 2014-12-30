@@ -6,12 +6,16 @@
 </head>
 <body ng-controller="formController">
 <h2>Results</h2>
-<div class="half">Risk Tolerance Score</div>
+<div class="score">
+	<div class="half"><h4>Risk Tolerance Score</h4>
+		{{ riskTolerenceScore }}
+	</div>
 
-<div class="half">Tolerance Fund
-
+	<div class="half"><h4>Tolerance Fund</h4>
+		{{ fundName }}
+	</div>
 </div>
-	<button ng-click="status()">hello</button>
+	
 <h3>Expectations</h3>
 <form>
 <ol>
@@ -76,41 +80,41 @@
 	<li class="important"><p>In approximately how many years do you expect to need the money you're investing?</p>
 
 		<div class="radio">
-			<label><input type="radio" name="InvestmentExperience1" id="optionsRadios1" value="1" ng-model="risk.experience1">3 Years</label>
-			<label><input type="radio" name="InvestmentExperience1" id="optionsRadios1" value="2" ng-model="risk.experience1">5 Years</label>
-			<label><input type="radio" name="InvestmentExperience1" id="optionsRadios1" value="3" ng-model="risk.experience1">10 Years</label>
-			<label><input type="radio" name="InvestmentExperience1" id="optionsRadios1" value="4" ng-model="risk.experience1">15 Years</label>
-			<label><input type="radio" name="InvestmentExperience1" id="optionsRadios1" value="5" ng-model="risk.experience1">20 Years or more</label>
-			<label><input type="radio" name="InvestmentExperience1" id="optionsRadios1" value=""  ng-model="risk.experience1">N/A</label>
+			<label><input type="radio" name="InvestmentExperience1" id="optionsRadios1" value="1" ng-model="risk.experience[0]">3 Years</label>
+			<label><input type="radio" name="InvestmentExperience1" id="optionsRadios1" value="2" ng-model="risk.experience[0]">5 Years</label>
+			<label><input type="radio" name="InvestmentExperience1" id="optionsRadios1" value="3" ng-model="risk.experience[0]">10 Years</label>
+			<label><input type="radio" name="InvestmentExperience1" id="optionsRadios1" value="4" ng-model="risk.experience[0]">15 Years</label>
+			<label><input type="radio" name="InvestmentExperience1" id="optionsRadios1" value="5" ng-model="risk.experience[0]">20 Years or more</label>
+			<label><input type="radio" name="InvestmentExperience1" id="optionsRadios1" value=""  ng-model="risk.experience[0]">N/A</label>
 		</div>
 	</li>
 	<li class="important"><p>The following graph shows the potential best and worst cases of investing $100,000 for one year in each of four hypothetical portfolios.  Portfolios with the potential greatest gains also have the largest potential losses. In which portfolio would you be most comfortable investing?</p>
 	<img class="img-responsive" src="investment2.png">
 		<div class="radio">
-			<label><input type="radio" name="InvestmentExperience2" id="optionsRadios1" ng-model="risk.experience2" value="1.5">A</label>
-			<label><input type="radio" name="InvestmentExperience2" id="optionsRadios1" ng-model="risk.experience2" value="3">B</label>
-			<label><input type="radio" name="InvestmentExperience2" id="optionsRadios1" ng-model="risk.experience2" value="4">C</label>
-			<label><input type="radio" name="InvestmentExperience2" id="optionsRadios1" ng-model="risk.experience2" value="5">D</label>
-			<label><input type="radio" name="InvestmentExperience2" id="optionsRadios1" ng-model="risk.experience2" value="">N/A</label>
+			<label><input type="radio" name="InvestmentExperience2" id="optionsRadios1" ng-model="risk.experience[1]" value="1.5">A</label>
+			<label><input type="radio" name="InvestmentExperience2" id="optionsRadios1" ng-model="risk.experience[1]" value="3">B</label>
+			<label><input type="radio" name="InvestmentExperience2" id="optionsRadios1" ng-model="risk.experience[1]" value="4">C</label>
+			<label><input type="radio" name="InvestmentExperience2" id="optionsRadios1" ng-model="risk.experience[1]" value="5">D</label>
+			<label><input type="radio" name="InvestmentExperience2" id="optionsRadios1" ng-model="risk.experience[1]" value="">N/A</label>
 		</div>
 	</li>
 	<li class="important"><p>The table below shows the probable long-term average annual return and the probable short-term range of returns for four hypothetical portfolios.  Choose the portfolio in which you are most confortable investing.</p>
 	<img class="img-responsive" src="investment3.png">
 		<div class="radio">
-			<label><input type="radio" name="InvestmentExperience3" id="optionsRadios1" ng-model="risk.experience3" value="1.5">A</label>
-			<label><input type="radio" name="InvestmentExperience3" id="optionsRadios1" ng-model="risk.experience3" value="3">B</label>
-			<label><input type="radio" name="InvestmentExperience3" id="optionsRadios1" ng-model="risk.experience3" value="4">C</label>
-			<label><input type="radio" name="InvestmentExperience3" id="optionsRadios1" ng-model="risk.experience3" value="5">D</label>
-			<label><input type="radio" name="InvestmentExperience3" id="optionsRadios1" ng-model="risk.experience3" value="">N/A</label>
+			<label><input type="radio" name="InvestmentExperience3" id="optionsRadios1" ng-model="risk.experience[2]" value="1.5">A</label>
+			<label><input type="radio" name="InvestmentExperience3" id="optionsRadios1" ng-model="risk.experience[2]" value="3">B</label>
+			<label><input type="radio" name="InvestmentExperience3" id="optionsRadios1" ng-model="risk.experience[2]" value="4">C</label>
+			<label><input type="radio" name="InvestmentExperience3" id="optionsRadios1" ng-model="risk.experience[2]" value="5">D</label>
+			<label><input type="radio" name="InvestmentExperience3" id="optionsRadios1" ng-model="risk.experience[2]" value="">N/A</label>
 		</div>
 	</li>
 	<li class="important"><p>I am willing to expereince potentially large and frequent declines in the value of my investment if it will increase the likelihood of achieving high, long-term returns.</p>
 		<div class="radio">
-			<label><input type="radio" name="InvestmentExperience4" id="optionsRadios1" ng-model="risk.experience4" value="5">Agree</label>
-			<label><input type="radio" name="InvestmentExperience4" id="optionsRadios1" ng-model="risk.experience4" value="3.5">Somewhat Agree</label>
-			<label><input type="radio" name="InvestmentExperience4" id="optionsRadios1" ng-model="risk.experience4" value="2.5">Somewhat Disagree</label>
-			<label><input type="radio" name="InvestmentExperience4" id="optionsRadios1" ng-model="risk.experience4" value="1">Disagree</label>
-			<label><input type="radio" name="InvestmentExperience4" id="optionsRadios1" ng-model="risk.experience4" value="">N/A</label>
+			<label><input type="radio" name="InvestmentExperience4" id="optionsRadios1" ng-model="risk.experience[3]" value="5">Agree</label>
+			<label><input type="radio" name="InvestmentExperience4" id="optionsRadios1" ng-model="risk.experience[3]" value="3.5">Somewhat Agree</label>
+			<label><input type="radio" name="InvestmentExperience4" id="optionsRadios1" ng-model="risk.experience[3]" value="2.5">Somewhat Disagree</label>
+			<label><input type="radio" name="InvestmentExperience4" id="optionsRadios1" ng-model="risk.experience[3]" value="1">Disagree</label>
+			<label><input type="radio" name="InvestmentExperience4" id="optionsRadios1" ng-model="risk.experience[3]" value="">N/A</label>
 		</div>
 	</li>
 	<li><p>If applicable, approximately what percentage of your total account would you like to remain in cash?</p>
@@ -120,6 +124,7 @@
 			<label><input type="radio" name="InvestmentExperience5" id="optionsRadios1" value="15">15%</label>
 			<label><input type="radio" name="InvestmentExperience5" id="optionsRadios1" value="20">20%</label>
 			<label><input type="radio" name="InvestmentExperience5" id="optionsRadios1" value="pleaseDetermine">Please determine for me, based off of my needs</label>		
+
 		</div>
 	</li>
 </ol>

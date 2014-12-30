@@ -467,6 +467,19 @@ table th[class*="col-"] {
       float: left;
       width: 50%; } }
 
+.score {
+  position: fixed;
+  right: 10px;
+  top: 10px;
+  width: 300px;
+  margin-left: -6;
+  margin-right: -6; }
+  .score:before, .score:after {
+    content: " ";
+    display: table; }
+  .score:after {
+    clear: both; }
+
 h2 {
   color: #362119; }
 
